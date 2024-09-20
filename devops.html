@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Learn About DevOps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        header {
+            background-color: #007ACC;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #005A9C;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        .container {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        h2 {
+            color: #007ACC;
+            margin-top: 0;
+        }
+        .accordion {
+            background-color: #e2e2e2;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: background-color 0.4s;
+            width: 100%;
+        }
+        .accordion:hover {
+            background-color: #d3d3d3;
+        }
+        .panel {
+            display: none;
+            padding: 0 18px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007ACC;
+            margin-bottom: 10px;
+        }
+        body.dark {
+            background-color: #222;
+            color: #fff;
+        }
+        nav.dark, footer.dark {
+            background-color: #111;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #FFD700;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I Learn About DevOps</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#resources">Resources</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="#faq">FAQs</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#social">Follow Me</a>
+        <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </nav>
+
+    <div class="container" id="teachers">
+        <h2>Acknowledgments</h2>
+        <p>My sincere gratitude to my esteemed teachers:</p>
+        
+        <h3>Sir Ateeb</h3>
+        <p>Incredible mentor guiding us through complex concepts in DevOps. His practical insights and hands-on approach have empowered students to apply their knowledge effectively.</p>
+        
+        <h3>Sir Waqas</h3>
+        <p>Known for his passion for technology, he simplifies intricate topics, making learning enjoyable and accessible for everyone.</p>
+        
+        <h3>Sir Munawar</h3>
+        <p>His extensive industry experience brings invaluable perspective to our learning, emphasizing teamwork and collaboration.</p>
+    </div>
+
+    <div class="container" id="home">
+        <h2>Welcome to My DevOps Journey</h2>
+        <p>This website documents my experience learning DevOps. Explore with me as I dive into CI/CD, Docker, Kubernetes, and more, focusing on both technical skills and the culture that drives software delivery.</p>
+    </div>
+
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <p>I'm passionate about DevOps, particularly in automation tools, infrastructure as code, and continuous delivery pipelines. My goal is to enhance collaboration between development and operations.</p>
+    </div>
+
+    <div class="container" id="services">
+        <h2>What I Offer</h2>
+        <ul>
+            <li>CI/CD Pipeline Setup</li>
+            <li>Docker & Kubernetes Solutions</li>
+            <li>Automation with Ansible & Terraform</li>
+            <li>Monitoring and Logging with Prometheus & Grafana</li>
+        </ul>
+    </div>
+
+    <div class="container" id="tasks">
+        <h2>This Week's Tasks</h2>
+        <h3>Step 01</h3>
+        <ol>
+            <li>Install Docker
+                <pre><code>sudo apt-get update
+sudo apt-get install docker.io</code></pre>
+            </li>
+            <li>Create Container
+                <pre><code>docker run -it --name my-container ubuntu</code></pre>
+            </li>
+            <li>Access your container
+                <pre><code>docker exec -it my-container bash</code></pre>
+            </li>
+            <li>Clone your code into the container
+                <pre><code>git clone https://github.com/yourusername/your-repo.git</code></pre>
+            </li>
+            <li>Create image from container
+                <pre><code>docker commit my-container my-image</code></pre>
+            </li>
+            <li>Push your Docker image to Docker Hub
+                <pre><code>docker login
+docker tag my-image yourusername/my-image
+docker push yourusername/my-image</code></pre>
+            </li>
+            <li>Delete container and local images
+                <pre><code>docker rm my-container
+docker rmi my-image</code></pre>
+            </li>
+            <li>Pull your images
+                <pre><code>docker pull yourusername/my-image</code></pre>
+            </li>
+            <li>Create a container and start it on port 80:80
+                <pre><code>docker run -d -p 80:80 yourusername/my-image</code></pre>
+            </li>
+            <li>Access your website
+                <pre><code>http://localhost</code></pre>
+            </li>
+        </ol>
+        <h3>Step 02</h3>
+        <ol>
+            <li>Make changes in your GitHub code</li>
+            <li>Start new container
+                <pre><code>docker run -it --name new-container ubuntu</code></pre>
+            </li>
+            <li>Clone your code in this new container and create image and push
+                <pre><code>git clone https://github.com/yourusername/your-repo.git
+docker commit new-container new-image
+docker tag new-image yourusername/new-image
+docker push yourusername/new-image</code></pre>
+            </li>
+        </ol>
+        <h3>Jenkins Pipeline</h3>
+        <ol>
+            <li>Delete existing image and container
+                <pre><code>docker rm existing-container
+docker rmi existing-image</code></pre>
+            </li>
+            <li>Pull image
+                <pre><code>docker pull yourusername/new-image</code></pre>
+            </li>
+            <li>Start new container with port 80:80
+                <pre><code>docker run -d -p 80:80 yourusername/new-image</code></pre>
+            </li>
+            <li>Access your website
+                <pre><code>http://localhost</code></pre>
+            </li>
+        </ol>
+    </div>
+
+    <div class="container" id="resources">
+        <h2>Resources</h2>
+        <p>Here are some valuable resources that have aided my learning in DevOps:</p>
+        <ul>
+            <li><a href="https://www.docker.com/" target="_blank">Docker</a> - Official site for installation and documentation.</li>
+            <li><a href="https://nginx.org/" target="_blank">Nginx</a> - Learn to configure and use Nginx as a web server.</li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a> - Version control and collaboration platform.</li>
+            <li><a href="https://www.jenkins.io/" target="_blank">Jenkins</a> - Open-source automation server for CI/CD.</li>
+            <li><a href="https://www.ansible.com/" target="_blank">Ansible</a> - Tool for managing configurations and deployments.</li>
+            <li><a href="https://www.terraform.io/" target="_blank">Terraform</a> - Infrastructure as code tool for versioning infrastructure.</li>
+            <li><a href="https://prometheus.io/" target="_blank">Prometheus</a> - Monitoring system and time series database.</li>
+            <li><a href="https://grafana.com/" target="_blank">Grafana</a> - Platform for monitoring and observability.</li>
+            <li><a href="https://www.devops.com/" target="_blank">DevOps.com</a> - Comprehensive site for DevOps articles, tutorials, and insights.</li>
+        </ul>
+    </div>
+
+    <div class="container" id="recommendations">
+        <h2>Recommendations</h2>
+        <ul>
+            <li>"Waseem demonstrates exceptional commitment and knowledge in DevOps." - Colleague</li>
+            <li>"His ability to adapt and learn quickly is impressive." - Mentor</li>
+            <li>"A great team player with a passion for technology." - Classmate</li>
+            <li>"Waseem breaks down complex problems into manageable tasks." - Project Manager</li>
+            <li>"His proactive approach and innovative thinking are invaluable." - Supervisor</li>
+            <li>"Waseem consistently shows enthusiasm for learning." - Peer</li>
+            <li>"He fosters collaboration among team members." - Team Lead</li>
+            <li>"A detail-oriented individual striving for excellence." - Classmate</li>
+        </ul>
+    </div>
+
+    <div class="container" id="faq">
+        <h2>FAQs</h2>
+        <button class="accordion">What is DevOps?</button>
+        <div class="panel">
+            <p>DevOps is a cultural philosophy, practice, and set of tools that increase an organization's ability to deliver applications and services at high velocity.</p>
+        </div>
+        <button class="accordion">Why use CI/CD?</button>
+        <div class="panel">
+            <p>CI/CD automates the software delivery process, allowing for faster and more reliable releases.</p>
+        </div>
+    </div>
+
+    <div class="container" id="newsletter">
+        <h2>Subscribe to My Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </div>
+
+    <div class="container" id="social">
+        <h2>Follow Me</h2>
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+        <a href="https://github.com/MuhammadWaseem29" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/muhammadwaseem11/" target="_blank">LinkedIn</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 I Learn About DevOps | All rights reserved.</p>
+    </footer>
+
+    <script>
+        const acc = document.getElementsByClassName("accordion");
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === "block" ? "none" : "block";
+            });
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+            document.querySelector('nav').classList.toggle('dark');
+            document.querySelector('footer').classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
