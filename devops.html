@@ -10,8 +10,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
+            background-color: #fff; /* Changed to white */
+            color: #000; /* Changed text color to black */
             transition: background-color 0.5s, color 0.5s;
         }
         header {
@@ -20,13 +20,13 @@
             padding: 1.5em 0;
             text-align: center;
             border-bottom: 5px solid #3d1e63;
-            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         nav {
             background-color: #3a3d40;
             padding: 1em;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         nav a {
             color: #fff;
@@ -45,9 +45,9 @@
             padding: 2em;
             margin: 1em auto;
             max-width: 800px;
-            background-color: #222;
+            background-color: #f0f0f0; /* Light gray for containers */
             border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             border-left: 5px solid #ff7eb3;
         }
         footer {
@@ -73,7 +73,7 @@
             color: #ffeb3b; /* Yellow */
         }
         .accordion {
-            background-color: #f0f0f0;
+            background-color: #fff;
             color: #333;
             cursor: pointer;
             padding: 10px;
@@ -94,7 +94,7 @@
             display: none;
             padding: 0 18px;
             overflow: hidden;
-            background-color: #333;
+            background-color: #e0e0e0; /* Slightly darker gray for panel */
             border-left: 4px solid #5b2e91;
             margin-bottom: 10px;
         }
@@ -145,11 +145,13 @@
             <h2>Acknowledgments</h2>
             <p>My sincere gratitude to my esteemed teachers:</p>
             <h3>Sir Ateeb</h3>
-            <p>Incredible mentor guiding us through complex concepts in DevOps. His practical insights and hands-on approach have empowered students to apply their knowledge effectively.</p>
+            <p>Your infectious enthusiasm for DevOps motivates us to pursue excellence. Thank you for nurturing our skills and encouraging critical and creative thinking. Your ability to relate theory to real-world applications has made our learning journey truly impactful.</p>
+            
             <h3>Sir Waqas</h3>
-            <p>Known for his passion for technology, he simplifies intricate topics, making learning enjoyable and accessible for everyone.</p>
+            <p>Your insightful guidance has inspired us to delve deep into DevOps, igniting our passion for continuous learning and innovation. Thank you for your unwavering support and for always challenging us to think outside the box.</p>
+            
             <h3>Sir Munawar</h3>
-            <p>His extensive industry experience brings invaluable perspective to our learning, emphasizing teamwork and collaboration.</p>
+            <p>Your talent for simplifying complex concepts has enriched our learning experience. We truly appreciate your dedication and engaging teaching style that fosters our success. Your feedback and encouragement empower us to tackle challenges with confidence.</p>
         </div>
 
         <div class="container" id="home">
@@ -220,9 +222,9 @@ docker rmi my-image</code></pre>
                 <li>Clone your code in this new container and create image and push
                     <pre><code>git clone https://github.com/yourusername/your-repo.git
 docker commit new-container new-image
-docker tag new-image yourusername/new-image
 docker push yourusername/new-image</code></pre>
                 </li>
+                <li>Use Jenkins to automate this process</li>
             </ol>
             <h3>Jenkins Pipeline</h3>
             <ol>
